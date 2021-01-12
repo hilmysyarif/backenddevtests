@@ -1,0 +1,57 @@
+7.
+    7.1 Laravel Docker
+
+        PHP Development Environment yang terdiri dari satu atau lebih container yang dimana bisa di artikan sebagai microservices application.
+        Jadi, Jika seorang developer menggunakan docker maka yang perlu disiapkan adalah Dockerfile. Yaitu sebuah file utama dalam docker yang memuat
+        skrip / perintah didalamnya, jadi ketika teamwork dengan adanya docker semua konfigurasi aplikasi sudah dimuat didalam docker tersebut tanpa
+        seorang developer lainnya mengkonfigurasi ulang.
+
+    7.2 Laravel Jetstream
+
+        Laravel jetstream adalah scaffolding dari laravel yang dimana sudah ada fitur auth didalamnya (login, register, dll) serta dengan dukungan Tailwind CSS
+        yang sudah termasuk frontend stack (cth: Intertia JS + vue). pada dasarnya fitur tersebut berada di laravel terbaru yakni laravel versi 8. 
+        dengan menggunakan Laravel jetstream ini, maka ketika kita memulai project baru maka akan lebih cepat memprosesnya dikarenakan sudah termasuk scaffolding didalamnya.
+
+8.
+
+    8.1 Eloquent Relationship
+
+        Eloquent Relationship adalah sebuat metode yang digunakan laravel untuk menghubungkan antar table menggunakan foreign dan primary key.
+        Beberapa macam eloquent relationship, antara lain :
+        - One to One
+        - One to many
+        - Belongs To (One to many Inverse)
+        - Has One
+        - dan Has many, serta beberapa lainnya.
+
+    8.2 Segment URL
+
+        URI segment adalah bagian bagian dari url/ uri yang ada setelah alamat homenya.
+        contoh : 
+        Route::get('/hello/{id}/{name}', function() {
+            dd(Request::segment(1));
+            //segment 1 akan mengeluarkan "hello", segmen2 mengeluarkan id, dan seterusnya
+        });
+
+    8.3 Data Mutator
+
+        Data mutator adalah sebuah fungsi dari laravel yang digunakan untuk menyimpan sebuah attribute.
+        contoh : 
+        public function setFullNameAttribute($customer)
+        {
+            $this->attributes['full_name'] = $customer->first_name . ' ' . $customer->last_name;
+        }
+
+    8.4 Blade Template
+
+        Blade template adalah templating engine yang dipakai oleh laravel dengan syntax yang sedikit berbeda dari PHP Native.
+        seluruh blade syntax akan di compile ke dalam php code dan akan di cache sampai sebuah view diubah.
+        extensi dari blade template yaitu : .blade.php
+        contoh blade syntax :
+        @yield('scripts')
+        @foreach($arr as $arr)
+        @endforeach
+        @section('content')
+        @endsection
+
+        dan masih banyak lagi lainnya.

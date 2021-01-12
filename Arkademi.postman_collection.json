@@ -1,0 +1,488 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Arkademi",
+		"_postman_id": "35e20471-5572-207e-8077-21d75616ab89",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LOGIN",
+			"request": {
+				"url": {
+					"raw": "{{base_url}}/api/login?username=superadmin&password=admin",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "password",
+							"value": "admin",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "token",
+							"value": "token-here",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "username",
+							"value": "superadmin",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic c3VwZXJhZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "superadmin",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "REGISTER",
+			"request": {
+				"url": {
+					"raw": "{{base_url}}/api/register",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token-here",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic c3VwZXJhZG1pbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "superadmin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "user_level",
+							"value": "user",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PRODUCTS",
+			"request": {
+				"url": {
+					"raw": "{{base_url}}/api/product",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"product"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token-here",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXJrYWRlbWl0ZXN0LnRlc3RcL2FwaVwvbG9naW4iLCJpYXQiOjE2MTA0NzExMzYsImV4cCI6MTYxMDQ3NDczNiwibmJmIjoxNjEwNDcxMTM2LCJqdGkiOiJWWVpZQW5ZeDZHY1U1NzFWIiwic3ViIjoiMSIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.wNCx5Ub_oSXe4dXRKOa9saurtw3BLXibQUmTzvSlMik",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "superadmin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "user_level",
+							"value": "user",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PRODUCT DETAIL",
+			"request": {
+				"url": {
+					"raw": "{{base_url}}/api/product/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"1"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token-here",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXJrYWRlbWl0ZXN0LnRlc3RcL2FwaVwvbG9naW4iLCJpYXQiOjE2MTA0NzExMzYsImV4cCI6MTYxMDQ3NDczNiwibmJmIjoxNjEwNDcxMTM2LCJqdGkiOiJWWVpZQW5ZeDZHY1U1NzFWIiwic3ViIjoiMSIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.wNCx5Ub_oSXe4dXRKOa9saurtw3BLXibQUmTzvSlMik",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "superadmin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "user_level",
+							"value": "user",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "NEW PRODUCT",
+			"request": {
+				"url": {
+					"raw": "{{base_url}}/api/product",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"product"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token-here",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXJrYWRlbWl0ZXN0LnRlc3RcL2FwaVwvbG9naW4iLCJpYXQiOjE2MTA0NzExMzYsImV4cCI6MTYxMDQ3NDczNiwibmJmIjoxNjEwNDcxMTM2LCJqdGkiOiJWWVpZQW5ZeDZHY1U1NzFWIiwic3ViIjoiMSIsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.wNCx5Ub_oSXe4dXRKOa9saurtw3BLXibQUmTzvSlMik",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "product_name",
+							"value": "Trouser",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "300000",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "100",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1233",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "_product_id",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE PRODUCT",
+			"request": {
+				"url": {
+					"raw": "{{base_url}}/api/product/5ffdcca639370000050044ca",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"5ffdcca639370000050044ca"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token-here",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXJrYWRlbWl0ZXN0LnRlc3RcL2FwaVwvbG9naW4iLCJpYXQiOjE2MTA0NjcwMzIsImV4cCI6MTYxMDQ3MDYzMiwibmJmIjoxNjEwNDY3MDMyLCJqdGkiOiJ0M1dXZkZJU1REZUpRMWNPIiwic3ViIjoiNWZmZGM2YWIzOTM3MDAwMDA1MDA0NGM3IiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.qhvH6qlPtOg5EMdy30KdutVgHu7ykdPF-kFvUIKKmUc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "product_name",
+							"value": "Trouser2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "300000",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "stock",
+							"value": "100",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "category_id",
+							"value": "1233",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"description": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "PRODUCT",
+			"request": {
+				"url": {
+					"raw": "{{base_url}}/api/product/1",
+					"host": [
+						"{{base_url}}"
+					],
+					"path": [
+						"api",
+						"product",
+						"1"
+					],
+					"query": [
+						{
+							"key": "token",
+							"value": "token-here",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wvYXJrYWRlbWl0ZXN0LnRlc3RcL2FwaVwvbG9naW4iLCJpYXQiOjE2MTA0NjcwMzIsImV4cCI6MTYxMDQ3MDYzMiwibmJmIjoxNjEwNDY3MDMyLCJqdGkiOiJ0M1dXZkZJU1REZUpRMWNPIiwic3ViIjoiNWZmZGM2YWIzOTM3MDAwMDA1MDA0NGM3IiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.qhvH6qlPtOg5EMdy30KdutVgHu7ykdPF-kFvUIKKmUc",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "superadmin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "test",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "user_level",
+							"value": "user",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
